@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    background-color: #ccc;
+    padding: 20px 0px 20px 0px;
+}
+
+#add-book-btn {
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.my-library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.book-card {
+
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    height: 230px;
+    border: 2px solid black;
+}
+
+.book-card>p:nth-child(1) {
+
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+.book-card>p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+}

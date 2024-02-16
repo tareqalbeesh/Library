@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>My Library</h1>
+    <button id="add-book-btn">add a book</button>
+    <div class="my-library-grid">
+
+    </div>
+    <dialog id="add-book-dialog">
+        <form onsubmit="">
+            <div>
+                <label for="name">Book Name</label>
+                <input id="name" type="text">
+            </div>
+            <div>
+                <label for="author">Author Name</label>
+                <input id="author" type="text">
+            </div>
+            <div>
+                <label for="pages">Pages Number</label>
+                <input id="pages" type="number" min="1">
+            </div>
+            <label for="reading-status">Did you read the book?</label>
+            <input type="checkbox" id="reading-status">
+            </radio>
+            <div>
+                <button value="Cancel" formmethod="dialog" id="add-book-dialog-cancel-btn">Cancel</button>
+                <button type="submit" id="add-book-dialog-confirmation-btn" value="default">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+
+</html>
