@@ -23,18 +23,43 @@ h1 {
     background-color: #ccc;
     padding: 20px;
     text-align: center;
-    height: 230px;
+    /* height: 300px; */
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.card-info {
+    flex: 1;
+
+}
+
+.book-card>img {
+    flex: 1;
+    display: flex;
+    height: 250px;
+    width: fit-content;
 }
 
 .book-card>p:nth-child(1) {
 
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
 
 }
 
 .book-card>p:nth-child(2) {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+.book-card>.card-info>p[id='read-status'] {
+    color: green;
+}
+
+.book-card>.card-info>p[id='not-read-status'] {
+    color: red;
 }
