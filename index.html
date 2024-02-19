@@ -16,14 +16,14 @@
         <img src="" alt="">
     </div>
     <dialog id="add-book-dialog">
-        <form onsubmit="">
+        <form>
             <div>
                 <label for="name">Book Name</label>
-                <input id="name" type="text">
+                <input id="name" type="text" minlength="3" required>
             </div>
             <div>
                 <label for="author">Author Name</label>
-                <input id="author" type="text">
+                <input id="author" type="text" required>
             </div>
             <div>
                 <label for="pages">Pages Number</label>
@@ -37,8 +37,8 @@
             <input type="checkbox" id="reading-status">
             </radio>
             <div>
-                <button value="Cancel" formmethod="dialog" id="add-book-dialog-cancel-btn">Cancel</button>
-                <button type="submit" id="add-book-dialog-confirmation-btn" value="default">Confirm</button>
+                <input type="submit" id="novalidate-close" value="cancel" formnovalidate />
+                <button type="Submit" id="add-book-dialog-confirmation-btn">Confirm</button>
             </div>
         </form>
     </dialog>

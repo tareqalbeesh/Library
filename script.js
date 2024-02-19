@@ -7,7 +7,6 @@ const addBookDialogName = document.querySelector('#name')
 const addBookDialogAuthor = document.querySelector('#author')
 const addBookDialogPages = document.querySelector("#pages")
 const addBookDialogReadingStatus = document.querySelector('#reading-status')
-const addBookDialogCancelButton = document.querySelector("#add-book-dialog-cancel-btn")
 const addBookDialog = document.querySelector("#add-book-dialog");
 const addBookDialogAddImg = document.querySelector("#img-url");
 const addBookDialogConfirmationButton = document.querySelector("#add-book-dialog-confirmation-btn");
@@ -29,7 +28,15 @@ addBookDialogConfirmationButton.addEventListener("click", (e) => {
     addBookForm.reset();
 
 })
-addBookDialogCancelButton.addEventListener("click", () => addBookForm.reset())
+
+addBookDialog.addEventListener("close", () => {
+    if (addBookDialog.returnVlaue != "default") {
+        let book = new Book(addBookDialogName.value, addBookDialogAuthor.value, addBookDialogPages.value, addBookDialogReadingStatus.value, addBookDialogAddImg.value);
+        myLibrary.push(book)
+
+        addBook(book, myLibrary.length - 1)
+    }
+})
 
 
 let Book = function (name, author, pages, read, imgUrl) {

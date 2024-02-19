@@ -63,3 +63,10 @@ h1 {
 .book-card>.card-info>p[id='not-read-status'] {
     color: red;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
